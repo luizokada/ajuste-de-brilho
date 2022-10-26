@@ -32,13 +32,12 @@ def treshold(image, limitT, isHeight, brightness,imgPath):
 def getUserData():
     imgPath = input("Digite o nome da Imagem(dentro da pasta images) = ")
     img  = cv.imread('./images/'+imgPath, 0)
-    limitT = int(input("T = "))
+    limitT = int(input("Digite o Limite T = "))
     isHeight = int(input("(0) Abaixo do Limite (1) Acima do Limete  =  "))
     if(isHeight<1):
         isHeight = False
     else:
         isHeight = True
-    print(isHeight)
     brightness = int(input("Brilho = "))
     return img,limitT,isHeight,brightness,imgPath
     
